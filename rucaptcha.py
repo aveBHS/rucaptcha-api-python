@@ -18,6 +18,14 @@ class RuCaptchaConnection:
                 raise ValueError(response.text)
         else:
             raise ValueError(f'[{response.status_code}] Could not connect to RuCatcha server!')
+    
+    def get_decision(self):
+        data = {"key" : self.token, 'action': 'getbalance'}
+        response = requests.post("https://rucaptcha.com/res.php", data=data)
+        try:
+            return round(float(response.text), 2)
+        except:
+            raise ValueError(response.text)
 
 class RuCaptcha:
     cid = None
