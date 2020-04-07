@@ -54,7 +54,7 @@ connection = RuCaptchaConnection(token='')
 captcha_file = open('./captcha.png', 'rb')
 captcha = connection.send(captcha_file)
 while True:
-  if(captcha.captcha_ready):
+  if(captcha.captcha_ready()):
     decision = captcha.get_decision()
     break
   time.sleep(5)
