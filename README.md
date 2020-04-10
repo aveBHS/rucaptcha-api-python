@@ -15,7 +15,7 @@ print(f"Successfully decided: {decision}")
 
 ## Список функций:
 
-| Класс | Функция | Описание | Вывод |
+| Класс | Функция | Описание | Результат |
 |-------|---------|----------|-------|
 | RuCaptchaConnection      | send(file)        | Отправка изображения на решение. Файл должен быть типа <_io.BufferedReader>.      | rucaptcha.RuCaptcha      |
 | RuCaptchaConnection      | get_balance()        | Получить баланс с точностью до 2-х знаков после запятой.      | float     |
